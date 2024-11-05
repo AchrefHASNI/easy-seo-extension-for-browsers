@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO SEO Checker & Metadata Analyzer for easy ranking </title>
+  <meta name="description" content="Enhance your website's search performance with the SEO Checker for Chrome. Easily analyze metadata, headers, images, links, sitemaps, and robots.txt to improve SEO rankings and optimize on-page content. Ideal for SEO professionals, content creators, and developers seeking quick, actionable insights.">
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+  <div class="container">
+    <div id="loader">
+        <div class="spinner"></div>
+      </div>
+      
+    <div class="top-header">
+
+        <h1>Easy SEO</h1>
+
+        <button class="export-btn" id="export">
+            Export report
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        </button>
+    </div>
+    <div class="tabs">
+      <button class="tablink" data-tab="Summary">Summary</button>
+      <button class="tablink" data-tab="MetaData">MetaData</button>
+      <button class="tablink" data-tab="Headers">Headers</button>
+      <button class="tablink" data-tab="Images">Images</button>
+      <button class="tablink" data-tab="Links">Links</button>
+      <button class="tablink" data-tab="About">About </button>
+    </div>
+
+    <div id="Summary" class="tabcontent">
+      <h2>Quick Summary</h2>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <strong>Title:</strong> <br>
+          <span id="summaryTitle"></span>
+        </div>
+        <div class="summary-item">
+          <strong>Meta Description:</strong><br>
+          <span id="summaryDescription"></span>
+        </div>
+        <div class="summary-item">
+          <strong>Keywords:</strong>
+          <span id="summaryKeywords"></span>
+        </div>
+        <div class="summary-item">
+            <strong>Robots.txt:</strong>
+            <span id="summaryRobots"></span>
+        </div>
+        <div class="summary-item">
+            <strong>Sitemap:</strong>
+            <span id="summarySitemap"></span>
+        </div>
+        <div class="summary-item">
+          <strong>Author:</strong>
+          <span id="summaryAuthor"></span>
+        </div>
+        <div class="summary-item">
+          <strong>Number of Headers:</strong>
+          <span id="summaryHeaders"></span>
+        </div>
+        <div class="summary-item">
+          <strong>Number of Images:</strong>
+          <span id="summaryImages"></span>
+        </div>
+        <div class="summary-item">
+          <strong>Number of Links:</strong>
+          <span id="summaryLinks"></span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div id="MetaData" class="tabcontent">
+      <h2>Meta Data</h2>
+      <div class="meta-data">
+        <p><strong>Title:</strong> <span id="metaTitle"></span></p>
+        <p><strong>Meta Description:</strong> <span id="metaDescription"></span></p>
+        <p><strong>Keywords:</strong> <span id="metaKeywords"></span></p>
+      </div>
+    </div>
+
+    <div id="Headers" class="tabcontent">
+      <h2>Headers</h2>
+      <div id="headersTree" class="headers-tree"></div>
+    </div>
+
+    <div id="Images" class="tabcontent">
+      <h2>Images</h2>
+      <p><strong>Total Images:</strong> <span id="totalImages"></span></p>
+      <div id="imagesList" class="images-list"></div>
+    </div>
+
+    <div id="Links" class="tabcontent">
+      <h2>Links</h2>
+      <p><strong>Total Links:</strong> <span id="totalLinks"></span></p>
+      <div id="linksList" class="links-list"></div>
+    </div>
+    <div id="About" class="tabcontent">
+        <h2>About</h2>
+        
+        <div id="aboutMeSection">
+            <h3>About Me</h3>
+            <p>
+                I am a full-stack JavaScript developer with experience in creating desktop applications, mobile applications, and web applications. My passion is building efficient, user-friendly, and scalable solutions to help businesses and individuals achieve their goals.
+            </p>
+            
+            <h3>Contact Me</h3>
+            <p>Visit my website for more information: <br>
+                <a href="https://www.achrefhasni.com" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                    achrefhasni.com</a>
+            </p>
+        </div>
+        
+        <div id="extensionInfo">
+            <h3>About This Extension</h3>
+            <p>
+                The SEO Checker extension is a tool designed to help you analyze and improve the SEO performance of your website. It provides insights into key SEO elements such as title length, meta descriptions, headers, images, and links. With instant feedback on content length and structure, it assists in ensuring your site is optimized for search engines.
+            </p>
+        </div>
+    </div>
+    
+  </div>
+
+  <script src="popup.js" ></script>
+</body>
+</html>

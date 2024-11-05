@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Easy SEO Level up",
+    "version": "1.0",
+    "description": "Enhance your website’s SEO with tools to analyze metadata, headers, images, and links directly in your browser.",
+    "permissions": ["activeTab", "scripting"],
+    "developer": {
+        "name": "Achref Hasni",
+        "url": "https://achrefhasni.com/"
+    },
+    "author": "Achref Hasni <achref11hasni@gmail.com>",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "16": "icon16.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "action": {
+        "default_icon": "icon128.png",
+        "default_title": "SEO Tools",
+        "default_popup": "popup.html"
+    }
+}
